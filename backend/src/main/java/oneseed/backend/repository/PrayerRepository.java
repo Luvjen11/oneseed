@@ -6,6 +6,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Repository
@@ -31,6 +32,16 @@ public interface PrayerRepository extends JpaRepository<Prayer, Long> {
      */
     @Query("SELECT p FROM Prayer p WHERE p.userId = :userId AND LOWER(p.title) LIKE LOWER(CONCAT('%', :searchText, '%'))")
     List<Prayer> findByTitleContaining(@Param("userId") Long userId, @Param("searchText") String searchText);
+    
+    /**
+     * Find prayers by date created range
+     */
+    List<Prayer> findByUserIdAndDateCreatedBetween(Long userId, LocalDateTime start, LocalDateTime end);
+    
+    /**
+     * Find prayers by date answered range
+     */
+    List<Prayer> findByUserIdAndDateAnsweredBetween(Long userId, LocalDateTime start, LocalDateTime end);
     
     /**
      * Count prayers by user ID
