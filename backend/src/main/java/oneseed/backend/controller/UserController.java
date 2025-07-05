@@ -19,18 +19,6 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    /**
-     * Create a new user
-     */
-    @PostMapping
-    public ResponseEntity<User> createUser(@RequestBody User user) {
-        try {
-            User createdUser = userService.createUser(user);
-            return new ResponseEntity<>(createdUser, HttpStatus.CREATED);
-        } catch (Exception e) {
-            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
-        }
-    }
 
     /**
      * Get user by ID
