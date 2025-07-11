@@ -1,0 +1,144 @@
+/* DailyVerse page styles */
+.dailyverse-bg {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #fff8ec 0%, #f6fbe9 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.dailyverse-content {
+  width: 100%;
+  max-width: 900px;
+  margin: 2.5rem auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.dailyverse-greeting {
+  font-size: 2.1rem;
+  font-weight: 800;
+  color: #15803d;
+  margin-bottom: 0.2rem;
+  text-align: left;
+  width: 100%;
+}
+.dailyverse-date {
+  color: #374151;
+  font-size: 1.1rem;
+  margin-bottom: 2.2rem;
+  width: 100%;
+  text-align: left;
+}
+.verse-card {
+  background: #fff;
+  border-radius: 1.3rem;
+  box-shadow: 0 4px 32px rgba(34,197,94,0.08);
+  padding: 2.2rem 2.5rem 1.5rem 2.5rem;
+  width: 100%;
+  max-width: 700px;
+  margin-bottom: 2.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.verse-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  margin-bottom: 0.7rem;
+}
+.verse-status-dot {
+  width: 10px;
+  height: 10px;
+  background: #bbf7d0;
+  border-radius: 50%;
+  display: inline-block;
+}
+.verse-status-label {
+  color: #22c55e;
+  font-weight: 700;
+  font-size: 1.02rem;
+  letter-spacing: 0.04em;
+}
+.verse-card-title {
+  color: #15803d;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.7rem;
+  text-align: center;
+}
+.verse-card-quote {
+  font-style: italic;
+  color: #1e293b;
+  font-size: 1.45rem;
+  text-align: center;
+  margin-bottom: 1.2rem;
+  line-height: 1.4;
+}
+.verse-card-ref {
+  color: #22c55e;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-top: 0.5rem;
+  display: block;
+}
+.verse-card-actions {
+  display: flex;
+  gap: 1.1rem;
+  justify-content: center;
+  margin-top: 0.7rem;
+}
+.verse-btn {
+  background: #fff;
+  color: #374151;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 1.2rem;
+  padding: 0.5rem 1.3rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.18s, color 0.18s, border 0.18s;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.verse-btn:hover {
+  background: #e0f2fe;
+  color: #15803d;
+  border: 1.5px solid #22c55e;
+}
+.verse-btn-green {
+  background: #f3f7c2;
+  color: #15803d;
+  border: 1.5px solid #bbf7d0;
+}
+.verse-btn-green:hover {
+  background: #bbf7d0;
+  color: #15803d;
+  border: 1.5px solid #22c55e;
+}
+.reflection-card {
+  background: #f6fbe9;
+  border-radius: 1rem;
+  padding: 1.2rem 1.5rem;
+  width: 100%;
+  max-width: 700px;
+  margin-top: 0.5rem;
+  box-shadow: 0 2px 12px rgba(34,197,94,0.06);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.reflection-title {
+  color: #374151;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+.reflection-question {
+  color: #374151;
+  font-size: 1.05rem;
+  text-align: center;
+} 
