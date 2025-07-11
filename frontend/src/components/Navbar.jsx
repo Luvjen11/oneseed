@@ -1,7 +1,7 @@
 import React from "react";
 import logo from "../assets/oneseed-logo-trans.png";
 import "../styles/navbar.css";
-import { Link, useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 export default function Navbar() {
   const navigate = useNavigate();
@@ -16,9 +16,9 @@ export default function Navbar() {
         <span className="navbar-title">OneSeed</span>
       </div>
       <div className="navbar-links">
-        <Link to="/dailyverse" className="navbar-link">Daily Verse</Link>
-        <Link to="/prayer" className="navbar-link">Prayer Journal</Link>
-        <Link to="/reflections" className="navbar-link">Reflections</Link>
+        <NavLink to="/dailyverse" className={({ isActive }) => isActive ? "navbar-link active" : "navbar-link"}>Daily Verse</NavLink>
+        <NavLink to="/prayer" className={({ isActive }) => isActive ? "navbar-link active" : "navbar-link"}>Prayer Journal</NavLink>
+        <NavLink to="/reflections" className={({ isActive }) => isActive ? "navbar-link active" : "navbar-link"}>Reflections</NavLink>
         <button className="navbar-link navbar-logout" onClick={handleLogout}>Logout</button>
       </div>
     </nav>

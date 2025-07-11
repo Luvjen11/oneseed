@@ -2,8 +2,8 @@ import React from "react";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Home from "./pages/Home";
 import DailyVerse from "./pages/DailyVerse";
-// import PrayerJournal from "./pages/PrayerJournal"; // placeholder
-// import Reflections from "./pages/Reflections"; // placeholder
+import PrayerJournal from "./pages/PrayerJournal";
+import Reflections from "./pages/Reflections";
 
 function PrivateRoute({ children }) {
   const token = localStorage.getItem("token");
@@ -20,8 +20,16 @@ export default function App() {
             <DailyVerse />
           </PrivateRoute>
         } />
-        {/* <Route path="/prayer" element={<PrayerJournal />} /> */}
-        {/* <Route path="/reflections" element={<Reflections />} /> */}
+        <Route path="/prayer" element={
+          <PrivateRoute>
+            <PrayerJournal />
+          </PrivateRoute>
+        } />
+        <Route path="/reflections" element={
+          <PrivateRoute>
+            <Reflections />
+          </PrivateRoute>
+        } />
       </Routes>
     </BrowserRouter>
   );
